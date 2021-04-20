@@ -4,7 +4,11 @@
 }
 
 .security{
+    border-style: solid;
+    border-color: grey;
     width: 100%;
+    height: 800px;
+    border-radius: 20px;
     text-align: center;
     margin-top: 20px;
 }
@@ -14,4 +18,68 @@
     margin-top: 10px;
     text-align: center;
     width: 100%;
+}
+
+.profileImage{
+    border-style: solid;
+    border-color: grey;
+    width: auto;
+    height: 300px;
+    margin-top: 20px;
+    border-radius: 20px;
+}
+
+.mainBox{
+    border-style: solid;
+    border-color: grey;
+    width: auto;
+    height: auto;
+    margin-top: 20px;
+    border-radius: 20px;
+}
+
+.ekstra{
+    border-style: solid;
+    border-color: grey;
+    width: auto;
+    height: 150px;
+    margin-top: 20px;
+    border-radius: 20px;
+}
+
+.postMaker{
+    margin: 20px;
+}
+
+.post{
+    margin: 20px;
+    padding: 5px;
+    border-style: solid;
+    border-color: grey;
+    border-radius: 10px;
+
+}
+
+.test{
+    font-size: 10px;
+}
+
+
+.line{
+    border-right: 1px solid;
+    border-color: grey;
+    height: auto;
+}
+
+input{
+    border-radius: 5px;
+    width: 100%;
+}
+
+.loginRegister{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
 }

@@ -58,14 +58,9 @@ function Security() {
 
   return (
     <div className="security">
-      {!facade.loggedIn() ? (<LogIn login={login} />) :
-        (<div className="security">
           <LoggedIn />
-          <Button onClick={logout}>Logout</Button>
-        </div>)}
     </div>
   )
- 
 }
 
 export default Security;
