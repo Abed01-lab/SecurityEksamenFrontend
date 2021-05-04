@@ -1,16 +1,18 @@
-import { Nav, Navbar } from 'react-bootstrap';
-import facade from './ApiFacade'
+import { Nav, Navbar, Button } from 'react-bootstrap';
+import firebase from './FirebaseApi'
 
-function Header() {
-    
+function Header({ user, setUser }) {
+    const handleButton = () => {
+        firebase.auth().signOut()
+        setUser(null)
+    }
     return (
         <>
             <Navbar bg="dark" variant="dark">
                 <Navbar.Brand href="/">FakeBook</Navbar.Brand>
-                <Nav className="mr-auto">                  
+                <Nav className="mr-auto">
                     <Nav.Link href="/">
-                        {!facade.loggedIn() ? "login" : "Logout"}
-                        
+                        <Button onClick={handleButton} >{user === null ? 'LogIn' : 'LogOut'}</Button>
                     </Nav.Link>
                 </Nav>
             </Navbar>

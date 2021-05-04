@@ -1,13 +1,34 @@
-import React from 'react'
-import Form from 'react-bootstrap/Form'
-import Button from 'react-bootstrap/Button'
+import { React, useRef } from 'react'
+import { Form, Button, Row, Col } from 'react-bootstrap'
+import facade from './ApiFacadeFakeBook'
+import firebase from './FirebaseApi'
 
-function PostMaker() {
+function PostMaker({ setPosts }) {
+
+    const messageRef = useRef()
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        const user = firebase.auth().currentUser;
+        const body = {
+            uid: user.uid,
+            message: messageRef.current.value
+        }
+        if (user) {
+            facade.addPost(body, user.za).then((data) => setPosts(data))
+        }
+    }
+
+
+
     return (
         <div className='postMaker'>
-            <Form>
+            <Form onSubmit={handleSubmit}>
                 <Form.Group controlId="formBasicEmail">
-                    <Form.Control type="text" placeholder="What is on yout heart" />
+                    <Row>
+                        <Col><Form.Control ref={messageRef} type="text" placeholder="What is on yout heart" /></Col>
+                        <Col xs={2}><Button className="" variant="primary" type="submit">Sumbit</Button></Col>
+                    </Row>
                 </Form.Group>
             </Form>
         </div>

@@ -1,33 +1,24 @@
 import Header from './Components/Header';
-import Security from './Components/Security';
-import { Switch, Route, BrowserRouter as Router } from 'react-router-dom';
+import { useState, useEffect } from 'react';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import facade from './Components/ApiFacade';
 import ProfilePage from './Components/ProfilePage';
 import LoginRegistrer from './Components/LoginRegistrer';
+import facade from './Components/ApiFacadeFakeBook'
+
 
 
 function App() {
+    const [user, setUser] = useState(null)
+    const [userInfo, setUserInfo] = useState(null)
+
     return (
         <div>
-            <Header />
+            <Header user={user} setUser={setUser} />
             <Row>
                 <Col></Col>
                 <Col xs={7}>
-                    <Router>
-                        <Switch>
-                            <Route path="/myprofile">
-                                <ProfilePage/>
-                            </Route>
-                            <Route path='/'>
-                                <LoginRegistrer >
-
-                                    <div>asdasdasds</div>
-                                </LoginRegistrer>
-                            </Route>
-                        </Switch>
-                    </Router>
+                    {user !== null ? <ProfilePage user={user} /> : <LoginRegistrer user={user} setUser={setUser} setUserInfo={setUserInfo} />}
                 </Col>
                 <Col></Col>
             </Row>
@@ -35,4 +26,4 @@ function App() {
     )
 }
 
-export default App;
+export default App
