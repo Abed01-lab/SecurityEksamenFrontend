@@ -24,6 +24,7 @@ function SignUpMore({ setUserInfo, setHasSignedUp }) {
             }
 
             facade.addUserInfo(body, user.za).then((data) => {
+                console.log(body)
                 setUserInfo(data)
                 setHasSignedUp(true)
             }).catch((error) => {

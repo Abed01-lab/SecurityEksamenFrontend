@@ -9,10 +9,15 @@ function handleHttpErrors(res) {
 
 function ApiFacadeFakeBook() {
 
-    const getUserInfo = (uid, token) => {
+    const getUserInfo = (token) => {
         const option = makeOptions("GET", undefined, token);
-        return fetch(`${URL}/api/userinfo/${uid}`, option).then(handleHttpErrors);
+        return fetch(`${URL}/api/userinfo`, option).then(handleHttpErrors);
     }
+
+    const getAllUserInfo = (token) => {
+      const option = makeOptions("GET", undefined, token);
+      return fetch(`${URL}/api/userinfo/all`, option).then(handleHttpErrors);
+  }
 
     const addUserInfo = (body, token) => {
         const option = makeOptions("POST", body, token);
@@ -24,16 +29,15 @@ function ApiFacadeFakeBook() {
         return fetch(`${URL}/api/userinfo`, option).then(handleHttpErrors);
     }
 
-    const getPosts = (uid, token) => {
+    const getPosts = (token) => {
       const option = makeOptions("GET", undefined, token);
-      return fetch(`${URL}/api/post/${uid}`, option).then(handleHttpErrors);
+      return fetch(`${URL}/api/post`, option).then(handleHttpErrors);
     }
 
     const addPost = (body, token) => {
       const option = makeOptions("POST", body, token);
       return fetch(`${URL}/api/post`, option).then(handleHttpErrors);
     }
-
 
     const makeOptions = (method, body, token) => {
         var opts = {
@@ -52,6 +56,7 @@ function ApiFacadeFakeBook() {
 
     return {
         getUserInfo,
+        getAllUserInfo,
         addUserInfo,
         editUserInfo,
         getPosts,

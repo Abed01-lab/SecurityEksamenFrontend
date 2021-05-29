@@ -13,7 +13,7 @@ function App() {
     const [userInfo, setUserInfo] = useState(null)
 
     return (
-        <div>
+        <div >
             <Header user={user} setUser={setUser} />
             <Row>
                 <Col></Col>

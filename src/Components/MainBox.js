@@ -11,17 +11,13 @@ function MainBox() {
 
     useEffect(() => {
         const user = firebase.auth().currentUser;
-        console.log(user.uid, user.za)
-        facade.getPosts(user.uid, user.za).then((data) => {
-            console.log(data)
+        facade.getPosts(user.za).then((data) => {
             setPosts(data)
         })
     },[])
 
     const Posts = () => {
-        return posts.map(post => (
-            <Post message={post.message}/>
-        ))
+        return posts.map(post => <Post message={post.message}/>  )
     }
 
     return (

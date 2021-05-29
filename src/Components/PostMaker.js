@@ -11,7 +11,6 @@ function PostMaker({ setPosts }) {
         e.preventDefault();
         const user = firebase.auth().currentUser;
         const body = {
-            uid: user.uid,
             message: messageRef.current.value
         }
         if (user) {

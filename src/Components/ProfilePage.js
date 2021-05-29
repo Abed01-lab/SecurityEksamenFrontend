@@ -6,6 +6,7 @@ import { Col, Container, Row } from 'react-bootstrap'
 import facade from './ApiFacadeFakeBook'
 import firebase from './FirebaseApi'
 import SignUpMore from './SignUpMore'
+import Members from './Members'
 
 function ProfilePage() {
 
@@ -17,14 +18,14 @@ function ProfilePage() {
         setIsLoading(true)
         const user = firebase.auth().currentUser;
         if (user) {
-            facade.getUserInfo(user.uid, user.za).then((data) => {
+            facade.getUserInfo(user.za).then((data) => {
+                console.log(user.za)
                 if(data === null){
                     setHasSignedUp(false)
                     setIsLoading(false)
                 } else {
                     setUserInfo(data)
                     setIsLoading(false)
-                    console.log(userInfo)
                 }
             }).catch((error) => {
                 console.log(error)
@@ -42,6 +43,7 @@ function ProfilePage() {
                 </Col>
                 <Col xs={9}>
                     <Mainbox />
+                    <Members  />
                 </Col>
             </>
         )
