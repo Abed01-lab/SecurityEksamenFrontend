@@ -1,9 +1,9 @@
 import {React} from 'react'
 
-function Esktra({ userInfo }) {
+function Extra({ userInfo }) {
     
     return (
-        <div className='ekstra'>
+        <div className='extra'>
             <p className='m-2'>Name: {userInfo.name}</p>
             <p className='m-2'>Phone: {userInfo.phoneNumber}</p>
             <p className='m-2'>Sex: {userInfo.sex}</p>
@@ -11,4 +11,4 @@ function Esktra({ userInfo }) {
     )
 }
 
-export default Esktra
+export default Extra

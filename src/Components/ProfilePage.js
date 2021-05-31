@@ -1,6 +1,6 @@
 import { React, useEffect, useState } from 'react'
 import ProfileImage from './ProfileImage'
-import Ekstra from './Esktra'
+import Extra from './Extra'
 import Mainbox from './MainBox'
 import { Col, Container, Row } from 'react-bootstrap'
 import facade from './ApiFacadeFakeBook'
@@ -39,7 +39,7 @@ function ProfilePage() {
             <>
                 <Col>
                     <ProfileImage />
-                    <Ekstra userInfo={userInfo}/>
+                    <Extra userInfo={userInfo}/>
                 </Col>
                 <Col xs={9}>
                     <Mainbox />

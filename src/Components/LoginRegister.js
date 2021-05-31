@@ -4,7 +4,7 @@ import { Col, Container, Form, Row, Button, Alert } from 'react-bootstrap'
 import firebase from './FirebaseApi'
 import './Doc.css'
 
-function LoginRegistrer({ setUser, user }) {
+function LoginRegister({ setUser, user }) {
     const [error, setError] = useState()
 
     const loginEmailRef = useRef()
@@ -43,7 +43,7 @@ function LoginRegistrer({ setUser, user }) {
 
     }
 
-    const LoginComponenet = () => {
+    const LoginComponent = () => {
         return (
             <div>
                 {error && <Alert className='mt-4' variant='danger'>{error}</Alert>}
@@ -76,7 +76,7 @@ function LoginRegistrer({ setUser, user }) {
                                 <Form.Control type="password" ref={signupPasswordRef} placeholder="Password" />
                             </Form.Group>
                             <Form.Group controlId="re-signup-password">
-                                <Form.Label>Re Enter Password</Form.Label>
+                                <Form.Label>Re-enter Password</Form.Label>
                                 <Form.Control type="password" ref={reConfirmPasswordRef} placeholder="Password" />
                             </Form.Group>
                             <Button variant="primary" type="submit">
@@ -91,9 +91,9 @@ function LoginRegistrer({ setUser, user }) {
 
     return (
         <Container className='security'>
-            <LoginComponenet />
+            <LoginComponent />
         </Container>
     )
 }
 
-export default LoginRegistrer
+export default LoginRegister

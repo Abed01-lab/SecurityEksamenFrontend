@@ -25,7 +25,7 @@ function PostMaker({ setPosts }) {
             <Form onSubmit={handleSubmit}>
                 <Form.Group controlId="formBasicEmail">
                     <Row>
-                        <Col><Form.Control ref={messageRef} type="text" placeholder="What is on yout heart" /></Col>
+                        <Col><Form.Control ref={messageRef} type="text" placeholder="What is on your mind?" /></Col>
                         <Col xs={2}><Button className="" variant="primary" type="submit">Sumbit</Button></Col>
                     </Row>
                 </Form.Group>

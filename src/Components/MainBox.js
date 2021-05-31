@@ -4,7 +4,6 @@ import PostMaker from './PostMaker'
 import facade from './ApiFacadeFakeBook'
 import firebase from './FirebaseApi'
 
-//husk lave en liste med posts
 function MainBox() {
 
     const [posts, setPosts] = useState([]);
