@@ -1,9 +1,9 @@
-.button{
+.button {
     width: 100%;
     margin-top: 20px;
 }
 
-.security{
+.security {
     border-style: solid;
     border-color: grey;
     width: 100%;
@@ -13,14 +13,14 @@
     margin-top: 20px;
 }
 
-.lignup{
+.lignup {
     display: inline-block;
     margin-top: 10px;
     text-align: center;
     width: 100%;
 }
 
-.profileImage{
+.profileImage {
     border-style: solid;
     border-color: grey;
     width: auto;
@@ -29,7 +29,7 @@
     border-radius: 20px;
 }
 
-.mainBox{
+.mainBox {
     border-style: solid;
     border-color: grey;
     width: auto;
@@ -38,7 +38,7 @@
     border-radius: 20px;
 }
 
-.extra{
+.extra {
     border-style: solid;
     border-color: grey;
     width: auto;
@@ -47,37 +47,34 @@
     border-radius: 20px;
 }
 
-.postMaker{
+.postMaker {
     margin: 20px;
-    
 }
 
-.post{
+.post {
     margin: 20px;
     padding: 5px;
     border-style: solid;
     border-color: grey;
     border-radius: 10px;
-
 }
 
-.test{
+.test {
     font-size: 10px;
 }
 
-
-.line{
+.line {
     border-right: 1px solid;
     border-color: grey;
     height: auto;
 }
 
-input{
+input {
     border-radius: 5px;
     width: 100%;
 }
 
-.loginRegister{
+.loginRegister {
     display: flex;
     flex-direction: column;
     align-items: center;

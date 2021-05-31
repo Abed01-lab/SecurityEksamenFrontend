@@ -1,10 +1,9 @@
-import { React, useEffect, useState } from 'react'
+import { React, useEffect, useState } from "react";
 
 function ViewPage() {
-
     useEffect(() => {
         //fetch members
-    }, [])
+    }, []);
 
     return (
         <>
@@ -16,7 +15,7 @@ function ViewPage() {
                 <Mainbox />
             </Col>
         </>
-    )
+    );
 }
 
-export default ViewPage
+export default ViewPage;
